@@ -71,8 +71,11 @@ const RegistrationForm = () => {
     setUsers(users.filter((user) => user.id !== id))
   }
   const onUpdateUserHandler = (id) => {
-    const currentUser = users.filter((user) => user.id === id);
+    const currentUser = users.filter((user) => user.id === id)[0];
     console.log(currentUser);
+    setName(currentUser.name);
+    setSurname(currentUser.surname);
+    setEmail(currentUser.email);
   }
 
   return (
