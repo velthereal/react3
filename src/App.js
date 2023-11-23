@@ -8,15 +8,16 @@ export const UsersContext = createContext();
 
 const App = () => {
 	const [usersCount, setUsersCount] = useState(0);
-  return (
-	<UsersContext.Provider value={ {usersCount, setUsersCount} }>
-		<div className="App">
-			<Header />
-			<Main />
-			<Footer />
-   	</div>
-	</UsersContext.Provider>
-  );
+	const [theLongestUsersName, setTheLongestUsersName] = useState('');
+	return (
+		<UsersContext.Provider value={ {usersCount, setUsersCount, theLongestUsersName, setTheLongestUsersName} }>
+			<div className="App">
+				<Header />
+				<Main />
+				<Footer />
+   		</div>
+		</UsersContext.Provider>
+	);
 };
 
 export default App;

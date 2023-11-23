@@ -40,6 +40,17 @@ const RegistrationForm = (props) => {
 	const [users, setUsers] = useState(DEFAULT_USERS);
 
 	contextData.setUsersCount(users.length);
+	const findTheLongestUsersName = () => {
+		let theLongestUsersName = '';
+		users.forEach((user) => {
+			theLongestUsersName = users[0].name;
+			if(users[0].name.length < user.name.length){
+				theLongestUsersName = user.name;
+			}
+		})
+		return theLongestUsersName;
+	}
+	contextData.setTheLongestUsersName(findTheLongestUsersName())
 
 	const [name, setName] = useState();
 	const [surname, setSurname] = useState();

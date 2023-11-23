@@ -12,6 +12,7 @@ const Footer = () => {
       	<FooterItem content="Контакти" isLowersetext={false} />
       	<FooterItem content="Блог" isLowersetext={false} />
 			<div>Total Users Count: {contextData.usersCount}</div>
+			<div>The Longest Name: { contextData.theLongestUsersName }</div>
    	</footer>
 	);
 };

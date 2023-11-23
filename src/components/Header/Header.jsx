@@ -5,6 +5,8 @@ import { useContext } from "react";
 
 const Header = () => {
 	const { usersCount } = useContext(UsersContext);
+	const contextData = useContext(UsersContext);
+
 	const navElements = [
    	{
    		text: "First",
@@ -39,6 +41,7 @@ const Header = () => {
 				);
 			})}
 			<div>User Count: { usersCount }</div>
+			<div>The Longest Name:  { contextData.theLongestUsersName }</div>
    	</header>
 	);
 };
