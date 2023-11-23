@@ -1,7 +1,6 @@
 import './userCard.css'
 
 const UserCard = ({ name, surname, email, id, onClickDeleteBtn, onClickUpdateBtn }) => {
-
 	return (
 		<div className='common-user-card'>
 			<div>{ `Name : ${name}` }</div>
